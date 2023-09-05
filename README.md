@@ -8,7 +8,7 @@ kemudian cek token
 ### Buat Grup Telegram dan tambahkan bot nya
 kemudian cek ID grup telegram dengan cara 
 ```
-https://api.telegram.org/bot5649983665:AAHWu2NfZGbDbcsU3guOsRhvwVz1IkMn6HM/getUpdates
+https://api.telegram.org/bot<PasteTokenBot>/getUpdates
 ```
 ambil token yang sudah dibuat di botfather
 
