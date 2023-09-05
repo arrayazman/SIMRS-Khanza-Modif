@@ -1,3 +1,6 @@
+[![Watch the video](https://img.youtube.com/vi/wq8CjBx1LJY/hqdefault.jpg)](https://www.youtube.com/embed/wq8CjBx1LJY)
+ 
+
 ## Pembuatan Bot dan Grup Telegram
 Buat BOT di ***BotFather*** 
 /newbot
