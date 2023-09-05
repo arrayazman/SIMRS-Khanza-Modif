@@ -7,16 +7,16 @@ kemudian cek token
 
 ### Buat Grup Telegram dan tambahkan bot nya
 kemudian cek ID grup telegram dengan cara 
-____________________________________________________________________________________________________________
+```
 https://api.telegram.org/bot5649983665:AAHWu2NfZGbDbcsU3guOsRhvwVz1IkMn6HM/getUpdates
-____________________________________________________________________________________________________________
+```
 ambil token yang sudah dibuat di botfather
 
 
 Tambahkan Fungsi Berikut pada akhir ***src/fungsi/koneksiDB.java***
 tujuannya yaitu untuk enkripsi bot telegram
 
-____________________________________________________________________________________________________________
+```
     public static String UrlAutoUpdate(){
         try {
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
@@ -106,30 +106,30 @@ ________________________________________________________________________________
     }
      
 
-____________________________________________________________________________________________________________
+```
 
 di folder ***setting/database.xml***
 Tambahkan 
-____________________________________________________________________________________________________________
+```
     <entry key="TOKENBOTTELE">5369768831:AAHVUuYjF8ni84ZqkfbstNxDaTdbUsGn06s</entry>
     <entry key="TELERAD">rAryY5fqc14lRvHW2zKbZA==</entry>
     <entry key="TELERADHASIL">rAryY5fqc14lRvHW2zKbZA==</entry>
     <entry key="TELELAB">F60Lkx08hZuQZDC7r2VhMA==</entry>
     <entry key="TELEFARMASI">aoTK2Y/UU+voRJs1NeiFyQ==</entry>
-____________________________________________________________________________________________________________
+```
 
 
 ### NOTIFIKASI TELEGRAM BOT PERMINTAAN RADIOLOGI
 di file ***src/permintaan/DlgPermintaanRadiologi.java***
 cari code berikut
-____________________________________________________________________________________________________________
+```
 koneksi.setAutoCommit(true);                    
                 JOptionPane.showMessageDialog(null,"Proses simpan selesai...!");
-____________________________________________________________________________________________________________
+```
 letaknya ada pada line **1405**
 
 pastekan code berikut
-____________________________________________________________________________________________________________
+```
  //START CODE TELEGRAM
                     String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&parse_mode=HTML";
                     //token bot telegram
@@ -165,17 +165,17 @@ ________________________________________________________________________________
                         e.printStackTrace();
                     }
                 //END CODE TELEGRAM    
-____________________________________________________________________________________________________________
+```
 sesuaikan dengan kebutuhan
 
-============================================================================================================
+---
 ### NOTIFIKASI TELEGRAM BOT HASIL RADIOLOGI
 
 ubah file ***src/simrskhanza/DlgPeriksaRadiologi.java***
 
 letakkan dibawah ***Proses Simpan Selesai***
 
-____________________________________________________________________________________________________________
+```
  //START CODE TELEGRAM
                     String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&parse_mode=HTML";
                     //token bot telegram
@@ -209,21 +209,21 @@ ________________________________________________________________________________
                         e.printStackTrace();
                     }
                 //END CODE TELEGRAM  
-____________________________________________________________________________________________________________
+```
 
-============================================================================================================
+---
 
 ### NOTIFIKASI TELEGRAM BOT PERMINTAAN LAB
 di file ***src/permintaan/DlgPermintaanLaboratorium.java***
 cari code berikut
-____________________________________________________________________________________________________________
+```
                   
                 JOptionPane.showMessageDialog(null,"Proses simpan selesai...!");
-____________________________________________________________________________________________________________
+```
 letaknya ada pada line **2778**
 paste kode berikut tepat dibawahnya
 
-____________________________________________________________________________________________________________
+```
 //START CODE TELEGRAM
                     String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&parse_mode=HTML";
                     //token bot telegram
@@ -259,21 +259,21 @@ ________________________________________________________________________________
                         e.printStackTrace();
                     }
                 //END CODE TELEGRAM  
-____________________________________________________________________________________________________________
+```
 
-============================================================================================================
+---
 ### NOTIFIKASI TELEGRAM BOT E-Resep
 di file ***src/inventory/DlgPeresepanDokter.java***
 cari code berikut di line **3820**
 
-____________________________________________________________________________________________________________
+```
 } catch (Exception e) {
             System.out.println("Notif : "+e);
         }
-____________________________________________________________________________________________________________
+```
 pastekan kode berikut ini tepat diatasnya
 
-____________________________________________________________________________________________________________
+```
 
              if(sukses==true){
                  //START CODE TELEGRAM
@@ -308,4 +308,4 @@ ________________________________________________________________________________
                     }
                 //END CODE TELEGRAM  
             }
-____________________________________________________________________________________________________________
+```
